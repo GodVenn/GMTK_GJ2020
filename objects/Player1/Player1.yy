@@ -5,33 +5,23 @@
     "name": "Player1",
     "eventList": [
         {
-            "id": "a1f89235-afcb-4bb2-8c13-7a5bd592bc1b",
+            "id": "85fa5292-777e-45ec-a5d7-f592146d77bc",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "da8d6b4e-58ec-4216-9e66-1813ba200f3d"
+        },
+        {
+            "id": "0b7f7fb4-1d26-4835-9a54-2605ed4298b5",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "da8d6b4e-58ec-4216-9e66-1813ba200f3d"
-        },
-        {
-            "id": "e139cf79-4989-4ee3-b30e-55666ebc66ac",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 37,
-            "eventtype": 5,
-            "m_owner": "da8d6b4e-58ec-4216-9e66-1813ba200f3d"
-        },
-        {
-            "id": "b4c4cafd-e9a2-4987-8335-727ac3d193b1",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 39,
-            "eventtype": 5,
             "m_owner": "da8d6b4e-58ec-4216-9e66-1813ba200f3d"
         }
     ],
