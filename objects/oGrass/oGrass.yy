@@ -1,8 +1,8 @@
 {
-    "id": "676b26cb-6a04-4c89-a0d3-a25215db0f3c",
+    "id": "3b9a027b-bc67-4dde-94e7-d2865ba1c71a",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "BoxGround",
+    "name": "oGrass",
     "eventList": [
         
     ],
@@ -23,7 +23,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": null,
-    "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "solid": true,
+    "spriteId": "c1400323-b1d0-4c74-80ba-7bb7a21e496d",
     "visible": true
 }

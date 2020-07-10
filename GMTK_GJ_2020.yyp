@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "3b9a027b-bc67-4dde-94e7-d2865ba1c71a",
+            "Value": {
+                "id": "420fc346-201e-46b3-8b62-8bf657258c4c",
+                "resourcePath": "objects\\oGrass\\oGrass.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5ed22c5a-bd70-4ee8-b619-b3295b5a7f25",
             "Value": {
                 "id": "41f3778e-9f24-4755-9540-abb1f1748785",
@@ -175,11 +183,27 @@
             }
         },
         {
+            "Key": "c1400323-b1d0-4c74-80ba-7bb7a21e496d",
+            "Value": {
+                "id": "75b17837-7bfe-4ada-a86e-24774ec4676a",
+                "resourcePath": "sprites\\sGrass\\sGrass.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c449e035-90c0-4d0a-9262-435eabec4dda",
             "Value": {
                 "id": "eb5f5697-c48e-4ce8-a55b-6f54b1cfbb9a",
                 "resourcePath": "views\\c449e035-90c0-4d0a-9262-435eabec4dda.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c5bb0432-78e2-4598-92bb-3f9cdd1803ef",
+            "Value": {
+                "id": "63993056-9223-425e-b1eb-d3880a3a2840",
+                "resourcePath": "rooms\\TorsteinsTestLEvel\\TorsteinsTestLEvel.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
