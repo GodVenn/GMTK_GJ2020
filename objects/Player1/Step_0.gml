@@ -18,7 +18,7 @@ vsp = vsp + grv;
 
 if (place_meeting(x,y+1,oBoxGround)) && (key_jump)
 {
-	vsp = -7	
+	vsp = -10	
 }
 
 
@@ -45,6 +45,36 @@ if(place_meeting(x,y+vsp,oBoxGround))
 }
 
 y = y + vsp;
+
+
+//Coyote jumping
+if (place_meeting(x,y+1,oBoxGround))
+{on_ground = true;}
+else
+{on_ground = false;}
+
+if on_ground = false
+{
+	if coyote_counter > 0 
+	{
+		coyote_counter -= 6;
+		
+		if jumped = false
+		{
+			if keyboard_check_pressed(vk_space)
+			{
+				vsp = -10;
+				jumped = true;
+			}
+		}
+	}
+}
+else
+{
+	jumped = false;
+	coyote_counter = coyote_max;
+}
+
 
 
 
