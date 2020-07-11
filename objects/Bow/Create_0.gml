@@ -7,3 +7,15 @@ if(instance_exists(currentPlayer)){
 }
 
 InitScaleWithDir();
+
+// Shooting arrows
+drawing = false;
+released = false;
+bow_counter = 0;
+bow_counter_thresh = 10;
+bow_step = 0;
+bow_step_max = 3
+arrow_xoffset = 0;
+arrow_yoffset = 0;
+arrow_base_speed = 2;
+dir = 1;

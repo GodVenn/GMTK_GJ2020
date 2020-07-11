@@ -1,10 +1,12 @@
-// Player input
-key_right = keyboard_check(vk_right);
-key_left = keyboard_check(vk_left);
-key_jump = keyboard_check_pressed(vk_space);
-
-
 event_inherited();
+
+// Player input
+key_right = keyboard_check(input_right);
+key_left = keyboard_check(input_left);
+key_jump = keyboard_check_pressed(input_jump);
+key_choose_arrow = keyboard_check_pressed(input_select_arrow);
+key_drawing_bow = keyboard_check(input_bow);
+key_arrow_released = keyboard_check_released(input_bow);
 
 // Player reacts to input
 
@@ -75,6 +77,8 @@ else
 	jumped = false;
 	coyote_counter = coyote_max;
 }
+
+// Drawing Bow
 
 
 //Animation

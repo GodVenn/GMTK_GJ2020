@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "13cfbc38-d162-458e-91a7-c4834f5db949",
+            "Value": {
+                "id": "531a2868-3865-4d41-b51b-7f1dc8940d23",
+                "resourcePath": "scripts\\DestroyIfOutsideRoom\\DestroyIfOutsideRoom.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1c02de52-6519-4db4-93da-d9bb42d1a7ce",
             "Value": {
                 "id": "663c6414-49a4-47ab-85ef-6e8c0a8d9a76",
@@ -82,7 +90,7 @@
             "Key": "301efdd6-4176-48f6-85c2-3c38538bac0f",
             "Value": {
                 "id": "da7ac87b-4de3-47b5-a095-ccd4283e7102",
-                "resourcePath": "objects\\Player2\\Player2.yy",
+                "resourcePath": "objects\\Player1\\Player1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -132,6 +140,14 @@
                 "id": "e7929561-1d8c-4546-8abf-c69c5d11986d",
                 "resourcePath": "options\\html5\\options_html5.yy",
                 "resourceType": "GMHtml5Options"
+            }
+        },
+        {
+            "Key": "846d00d0-71a2-41ba-8fc3-5f051873143a",
+            "Value": {
+                "id": "4b8b8b3e-f6c4-4774-aea9-fcbabbfa2ade",
+                "resourcePath": "sprites\\AskWalking\\AskWalking.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -314,7 +330,8 @@
     "script_order": [
         "a78a7447-1f90-4040-9497-779f45975e2b",
         "f8f6a8cf-8862-4660-89b4-23cb902e9e64",
-        "da1c45a6-23d1-43a5-b223-7cc5e2ecb505"
+        "da1c45a6-23d1-43a5-b223-7cc5e2ecb505",
+        "13cfbc38-d162-458e-91a7-c4834f5db949"
     ],
     "tutorial": ""
 }
