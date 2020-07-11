@@ -15,7 +15,7 @@
             "m_owner": "301efdd6-4176-48f6-85c2-3c38538bac0f"
         },
         {
-            "id": "0b7f7fb4-1d26-4835-9a54-2605ed4298b5",
+            "id": "4db9800f-8629-4a7b-9c75-1ae0b82af993",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "301efdd6-4176-48f6-85c2-3c38538bac0f"
         }
     ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "maskSpriteId": "251d73d5-2f30-480c-9772-5134aa9464ca",
     "overriddenProperties": null,
     "parentObjectId": "b21efbec-ec11-4e60-b166-fc01a4e77580",
     "persistent": false,
@@ -72,6 +72,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "846d00d0-71a2-41ba-8fc3-5f051873143a",
+    "spriteId": "251d73d5-2f30-480c-9772-5134aa9464ca",
     "visible": true
 }

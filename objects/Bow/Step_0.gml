@@ -1,9 +1,14 @@
-/// @description Follow Player and Shoot arrrows
-//Follow player
+/// @description Animate and Follow Player and Shoot arrrows
+
+drawing = false;
+released = false;
+
+// Follow player
 if(instance_exists(currentPlayer)){
 	FollowObject(currentPlayer, xOffset, yOffset);
 }
 
+/// Shoot arrow
 
 // Get Shoot Input
 with(currentPlayer){
@@ -11,31 +16,41 @@ with(currentPlayer){
 	other.current_arrow = current_arrow;
 	if(key_drawing_bow){
 		other.drawing = true;
-		other.released = false;
 	}
-	if(key_arrow_released){
-		other.drawing = false;
-		other.released = true;
-	}	
 }
 
 // Charge bow
-if (drawing) bow_counter++;
+if (drawing) bow_counter ++;
 bow_step = min((bow_counter div bow_counter_thresh), bow_step_max);
 
 // Release arrow
-if (released && bow_step > 0){
+if (currentPlayer.key_arrow_released && bow_step > 0){
+	if(bow_step == bow_step_max) {audio_play_sound(FullSpennetBue,5,false);}
+	released = true;
 	bow_counter = 0;
 	with(instance_create_layer(x+arrow_xoffset, y+arrow_yoffset,"Arrows", current_arrow)){
-		current_speed = other.arrow_base_speed * other.bow_step;
+		current_speed = base_speed * other.bow_step;
 		dir = other.dir;
 	}
 	bow_step = 0;
-	released = false;
 }
 
-//Animation
+// Animation
+with(currentPlayer){
+	if(!dead){
+		if(other.drawing || other.released){
+			torso_instance.sprite_index = shooting_animation;
+			torso_instance.image_index = other.released? other.release_image_index : other.bow_step;
+		}
+		else{
+			if (torso_instance.sprite_index == shooting_animation){
+				torso_instance.sprite_index = idle_animation;
+				torso_instance.image_index = 0;
+			}
+		}
+	}
+}
+
 ScaleWithDir();
-var	currentXOffset = dir * xOffset;
 
 
