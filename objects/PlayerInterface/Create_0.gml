@@ -2,15 +2,17 @@
 InitScaleWithDir();
 
 // Health
-hp = 1;
+max_hp = 5;
+hp = max_hp;
 dead = false;
 
 // General
+hsp_knockback = 0;
 hsp = 0;
 vsp = 0;
 grv = 0.8;
 jumpsp = 25;
-walksp = 10;
+walksp = 15;
 airborne = true;
 landed = false;
 
@@ -22,7 +24,7 @@ on_ground = false;
 
 // Bow and Arrow
 bow = instance_nearest(x,y,Bow);
-current_arrow = Arrow;
+current_arrow = oPistolArrow;
 
 // Model
 legs = AskLegs;

@@ -4,11 +4,10 @@ drawing = false;
 released = false;
 
 // Follow player
+var currentXoffset = dir * xOffset;
 if(instance_exists(currentPlayer)){
-	FollowObject(currentPlayer, xOffset, yOffset);
+	FollowObject(currentPlayer, currentXoffset, yOffset);
 }
-
-/// Shoot arrow
 
 // Get Shoot Input
 with(currentPlayer){
@@ -24,6 +23,7 @@ if (drawing) bow_counter ++;
 bow_step = min((bow_counter div bow_counter_thresh), bow_step_max);
 
 // Release arrow
+if (currentPlayer.key_arrow_released) bow_counter = 0;
 if (currentPlayer.key_arrow_released && bow_step > 0){
 	if(bow_step == bow_step_max) {audio_play_sound(FullSpennetBue,5,false);}
 	released = true;
@@ -31,6 +31,7 @@ if (currentPlayer.key_arrow_released && bow_step > 0){
 	with(instance_create_layer(x+arrow_xoffset, y+arrow_yoffset,"Arrows", current_arrow)){
 		current_speed = base_speed * other.bow_step;
 		dir = other.dir;
+		shooter = other.currentPlayer;
 	}
 	bow_step = 0;
 }

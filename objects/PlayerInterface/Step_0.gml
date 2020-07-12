@@ -1,6 +1,8 @@
 /// @description 
 
 ScaleWithDir();
+// Knockback
+hsp_knockback = max(0, hsp_knockback-1); 
 
 // Player input
 key_right = keyboard_check(input_right);
@@ -15,15 +17,20 @@ key_arrow_released = keyboard_check_released(input_bow);
 var move = key_right - key_left;
 
 hsp = move * walksp;
+hsp += hsp_knockback;
 
 vsp += sign(vsp) > 0 ? grv : (grv / 1.3); 
 
 
 // Jumping
-landed = airborne && place_meeting(x,y+1,oBoxGround);
-airborne = !place_meeting(x,y+1,oBoxGround);
+with(legs_instance){
+	other.landed = (other.airborne 
+					&& place_meeting(other.x, other.y + 1, oBoxGround) 
+					&& sign(other.vsp) > 0);
+	other.airborne = !place_meeting(other.x, other.y + 1, oBoxGround);
+}
 
-if (!airborne) && (key_jump)
+if ((!airborne) && (key_jump) && (vsp >= 0))
 {
 	vsp = -jumpsp;
 }
@@ -33,38 +40,27 @@ if (!airborne) && (key_jump)
 with(legs_instance){
 	if(place_meeting(other.x + other.hsp, other.y, oBoxGround))
 	{
-		var collide = true;
-		for(var i = 0; i < abs(other.hsp); i++)
+		while (!place_meeting(other.x+sign(other.hsp),y,oBoxGround))
 		{
-			if (!place_meeting(other.x + other.hsp, other.y - i, oBoxGround))
-			{
-				other.y -= i;
-				collide = false;
-			}
+			other.x += sign(other.hsp);
 		}
-		if(collide){
-			while (!place_meeting(other.x+sign(other.hsp),y,oBoxGround))
-			{
-				other.x += sign(other.hsp);
-			}
-			other.hsp = 0;
-		}
-		
+		other.hsp = 0;
 	}
 }
 
 x = x + hsp;
 
 // Vertical Collision
-if((sign(vsp) > 0) && place_meeting(x,y+vsp,oBoxGround))
-{
-	while (!place_meeting(x,y+sign(vsp),oBoxGround))
+with(legs_instance){
+	if((sign(other.vsp) > 0) && place_meeting(other.x, other.y + other.vsp, oBoxGround))
 	{
-		y = y + sign(vsp);
+		while (!place_meeting(other.x, other.y + sign(other.vsp), oBoxGround))
+		{
+			other.y += sign(other.vsp);
+		}
+		other.vsp = 0;
 	}
-	vsp = 0;
 }
-
 y = y + vsp;
 
 

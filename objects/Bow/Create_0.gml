@@ -12,7 +12,7 @@ InitScaleWithDir();
 drawing = false;
 released = false;
 bow_counter = 0;
-bow_counter_thresh = 1 * room_speed;
+bow_counter_thresh = 0.5 * room_speed;
 bow_step = 0;
 bow_step_max = 3;
 release_image_index = 4;

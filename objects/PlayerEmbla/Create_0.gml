@@ -3,7 +3,7 @@ event_inherited();
 // Player Model
 legs = AskLegs;
 torso = EmblaTorso;
-dead_model = EmblaDeath;
+dead_model = EmblaDead;
 legs_instance = instance_create_layer(x,y,"Player",legs);
 torso_instance = instance_create_layer(x,y,"Player",torso);
 shooting_animation = EmblaShooting;
