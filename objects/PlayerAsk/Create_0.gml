@@ -1,7 +1,7 @@
 event_inherited();
 
 // Arrow
-current_arrow = oKnockbackArrow;
+current_arrow = -1;
 
 // Player Model
 legs = AskLegs;

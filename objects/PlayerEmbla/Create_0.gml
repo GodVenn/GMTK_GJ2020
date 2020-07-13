@@ -1,4 +1,6 @@
 event_inherited();
+// Arrow
+current_arrow = -1;
 
 // Player Model
 legs = AskLegs;
@@ -21,6 +23,6 @@ image_alpha = 0;//Make placeholder sprite invisible
 input_left = vk_left;
 input_right = vk_right;
 input_jump= vk_up;
-input_bow = vk_shift;
+input_bow = vk_enter;
 input_select_arrow = vk_down;
 

@@ -1,10 +1,9 @@
 /// @description Destroy if outside of room
-life_timer++;
 
 //Speed is reduced by air friction
 current_speed = max(0,current_speed - air_friction);
-x = x + (current_speed * dir);
-image_xscale = dir;
+x += current_speed * dir;
+//image_xscale = dir;
 
 // Effective Gravity depends on the speed
 var effective_gravity = lerp(0, arrow_gravity, 1-power(current_speed/max_speed,2));

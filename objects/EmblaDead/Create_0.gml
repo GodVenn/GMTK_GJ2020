@@ -1,2 +1,2 @@
 /// @description Play death sound
-audio_play_sound(Death, 7, false);
+audio_play_sound(GirlDyingFree, 7, false);

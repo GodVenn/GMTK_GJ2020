@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oCredits_button",
     "eventList": [
-        
+        {
+            "id": "1743dc22-a2fa-430a-a10f-ffd0d4c00d0e",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 6,
+            "m_owner": "75def2b6-08b0-48b2-95bf-a892454de490"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

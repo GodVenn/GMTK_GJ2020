@@ -19,7 +19,7 @@ var move = key_right - key_left;
 hsp = move * walksp;
 hsp += hsp_knockback;
 
-vsp += sign(vsp) > 0 ? grv : (grv / 1.3); 
+vsp += sign(vsp) > 0 ? grv : (grv / 1.7); 
 
 
 // Jumping
@@ -52,6 +52,16 @@ x = x + hsp;
 
 // Vertical Collision
 with(legs_instance){
+
+	if(place_meeting(other.x, other.y + other.vsp, oBoxRoof))
+	{
+		while (!place_meeting(other.x, other.y + sign(other.vsp), oBoxRoof))
+		{
+			other.y += sign(other.vsp);
+		}
+		other.vsp = 0;
+	}
+	
 	if((sign(other.vsp) > 0) && place_meeting(other.x, other.y + other.vsp, oBoxGround))
 	{
 		while (!place_meeting(other.x, other.y + sign(other.vsp), oBoxGround))

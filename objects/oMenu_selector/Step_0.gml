@@ -1,2 +1,4 @@
 /// @description Follow current button
-FollowObject(current_button,xOffset,yOffset);
+if(instance_exists(current_button)){
+	FollowObject(current_button,xOffset,yOffset);
+}
